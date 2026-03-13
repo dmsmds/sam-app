@@ -16,6 +16,9 @@ Resources:
     Properties:
       CodeUri: hello_world/
       Handler: app.lambda_handler
+      AutoPublishAlias: live
+      DeploymentPreference:
+        Type: Canary10Percent5Minutes
       Runtime: python3.9
       Architectures:
         - x86_64
